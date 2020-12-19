@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { QuizDataContextProvider } from "./data/quiz-data.context";
+import { QuizDataContextProvider } from "./Data/quiz-data.context";
 import { initNotifications } from "./Services/firebase.service";
 
 const loader = document.querySelector(".loader");
@@ -21,5 +21,5 @@ ReactDOM.render(
 );
 
 initNotifications();
-serviceWorkerRegistration.unregister();
+serviceWorkerRegistration.register();
 reportWebVitals();
