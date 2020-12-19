@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { useContext, useState } from "react";
 import { fetchType, IInitialCard } from "../../Types/quiz-types";
-import { QuizDataContext } from "../../Data/quiz-data.context";
+import { QuizDataContext } from "../../data/quiz-data.context";
 
 const InitialCard: React.FC<IInitialCard> = ({ setCardChange }) => {
   const { requiredData } = useContext(QuizDataContext);

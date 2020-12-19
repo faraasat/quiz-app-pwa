@@ -4,8 +4,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import QuizCard from "./Components/QuizCard/quiz-card.component";
-import { parseQuizData } from "./Utils/util";
-import { QuizDataContext } from "./Data/quiz-data.context";
+import { parseQuizData } from "./utils/util";
+import { QuizDataContext } from "./data/quiz-data.context";
 import { GetQuizData } from "./Services/quiz-data";
 import { Loader } from "./Types/quiz-types";
 
@@ -16,7 +16,7 @@ const App: React.FC<Loader> = ({ hideLoader, showLoader }) => {
   const { combined_data } = useContext(QuizDataContext);
 
   useEffect(() => {
-    hideLoader();
+    hideLoader!();
     setQuizLoading(true);
     GetQuizData(combined_data.req_quiz)
       .then((res) => {

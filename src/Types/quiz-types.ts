@@ -52,6 +52,6 @@ export interface ChildType {
 }
 
 export interface Loader {
-  showLoader: () => void | undefined;
-  hideLoader: () => void | undefined;
+  showLoader?: () => void | undefined;
+  hideLoader?: () => void | undefined;
 }
