@@ -6,7 +6,7 @@ import "./App.css";
 import QuizCard from "./Components/QuizCard/quiz-card.component";
 import { parseQuizData } from "./utils/util";
 import { QuizDataContext } from "./data/quiz-data.context";
-import { GetQuizData } from "./services/quiz-data";
+import { GetQuizData } from "./Services/quiz-data";
 import { Loader } from "./Types/quiz-types";
 
 const App: React.FC<Loader> = ({ hideLoader, showLoader }) => {
